@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link href="circle.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+
+    <title>Neon Rainbow</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="currentColor"
+            d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+          </path>
+        </svg>
+      </div>    <header class="header">
+      <div class="container">
+        <div class="header-top-wrapper">
+          <div class="logo-wrapper">
+            <a class="logo__link" href="#">
+              <img src="assets/images/logo.png" alt="logo">
+            </a>
+          </div>
+          <nav class="main-nav" aria-label="Main">
+            <button class="main-nav-close">
+              <span>.</span>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="#">наши работы</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Галерея</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">конструктор</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">аренда</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">мастерская</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Инфо-центр </a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="tel:+79133391977">
+                  +7 (913)
+                  339-19-77
+                  <svg class="svg-sprite-icon icon-tel">
+                    <use xlink:href="assets/images/svg/sprite.svg#tel"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="basket-wrapper">
+            <a class="header-busket js-open-modal" data-name='basket' id="basket" href="#">
+              <svg class="svg-sprite-icon icon-basket">
+                <use xlink:href="assets/images/svg/sprite.svg#basket"></use>
+              </svg><span class="basket-counter">2</span></a>
+          </div>
+          <ul id="hide-nav" class="hide-nav">
+            <li class="hide-nav__line hide-nav__line--top"></li>
+            <li class="hide-nav__line hide-nav__line--middle"></li>
+            <li class="hide-nav__line hide-nav__line--bottom"></li>
+          </ul>
+          <div class="card-modal modal-wrapper " id="shoping-card" data-name='basket'>
+              <div class="mymodal">
+                  <button class="modal-btn-close js-modal-close">
+                      <span class="modal-close"></span>
+                  </button>
+                  <h2 class="modal-title">Ваша корзина</h2>
+                  <div class="basket-card-box">
+                      <div class="basket-card">
+                          <div class="basket-card__img"> <img class="basket-img" src="assets/images/basket1.png"></div>
+                          <div class="basket-card__text-box">
+                              <p class="basket-card__text">
+                                  Неоновый светильник котик</p>
+                              <div class="basket-card__quantity"><span class="basket-quantity__minus">-</span><span
+                                      class="basket-quantity__current">1</span><span class="basket-quantity__plus">+</span></div>
+                          </div>
+                          <div class="basket-amount">
+                              <div class="basket-card__amount"><span class="card-amount">7990</span><span
+                                      class="card-amount__currency">₽</span>
+                              </div>
+                              <div class="basket-card__remove"><span class="card-remove">+ </span></div>
+                          </div>
+                      </div>
+                      <div class="basket-card">
+                          <div class="basket-card__img"> <img class="basket-img" src="assets/images/basket2.png"></div>
+                          <div class="basket-card__text-box">
+                              <p class="basket-card__text">
+                                  Неоновый светильник
+                                  Форма</p>
+                              <div class="basket-card__quantity"><span class="basket-quantity__minus">-</span><span
+                                      class="basket-quantity__current">1</span><span class="basket-quantity__plus">+</span></div>
+                          </div>
+                          <div class="basket-amount">
+                              <div class="basket-card__amount"><span class="card-amount">6990</span><span
+                                      class="card-amount__currency">₽</span></div>
+                              <div class="basket-card__remove"><span class="card-remove">+ </span></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="out-product"><span class="out-product__text">Сумма</span><span
+                          class="our-product__number">14980</span><span class="our-product__money">₽</span> </div>
+                  <form class="modal-form" action="" method="get">
+                      <div class="input-box ib-1">
+                          <input class="modal-form__input modal-name" type="text" required />
+                          <span class="form-span">Имя</span>
+                      </div>
+                      <div class="input-box ib-2">
+                          <input class="modal-form__input modal-tel" type="text" required />
+                          <span class="form-span">телефон</span>
+                      </div>
+                      <div class="input-box ib-2">
+                          <input class="modal-form__input modal-mail" type="text" required />
+                          <span class="form-span">эл. почта</span>
+                      </div>
+          
+          
+                      <div class="modal-form__checkbox-wrapper">
+                          <label class="modal-form__checkbox-label">
+                              <input class="modal-form__checkbox-input" type="checkbox"><span class="modal-form__checkbox-text">Я
+                                  согласен
+                                  с </span>
+                          </label>
+                          <a class="modal-form__link"> &nbspполитикой конфиденциальности</a>
+                      </div>
+                      <button class="modal-form__button">Оформить заказ</button>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+    </header>    <section class="main-banner">
+        <img class="main-banner__img" src="assets/images/headerbackground.jpg">
+        <div class="container">
+            <h1 class="header-title">Создаем вывески и светильники <br> из гибкого неона  <span class="header-price">от
+                1490₽</span></h1>
+           
+            <a href="#" class="main-banner__link main-banner__link-construct">
+                <svg class="svg-sprite-icon icon-construct">
+                    <use xlink:href="assets/images/svg/sprite.svg#construct"></use>
+                </svg></a>
+            <a href="#" class="main-banner__link main-banner__link-gallery">
+                <svg class="svg-sprite-icon icon-gallery">
+                    <use xlink:href="assets/images/svg/sprite.svg#gallery"></use>
+                </svg>
+            </a>
+            <a href="#" class="main-banner__link"></a>
+            <a href="#" class="main-banner__link"></a>
+            <a href="#" class="main-banner__link"></a>
+           
+        </div>
+    </section>    <section class="our-work">
+        <h2 class="our-work-title">Наши работы</h2>
+        <div class="container">
+            <div class="portfolio-main-carousel">
+                <div class="portfolio-carousel-cell">
+                    <div class="portfolio-carousel-box">
+                        <img src="assets/images/slide1.png" alt="foto">
+                    </div>
+                    <div class="portfolio-carousel-box">
+                        <h2 class="portfolio-carousel-title">Неоновая вывеска
+                            <br>«MANYA BAR»</h2>
+                        <p class="portfolio-carousel-text">
+                            Выполнена на оргстекле для Manya bar, г. Новокузнецк.
+                            ️<span>Бар с непревзойдённым стилем, долей бунтарства и великолепной атмосферой!</span>
+                            Одно из мест в мире, в котором нужно побывать!
+                        </p>
+                        <div class="portfolio-carousel-parameters">
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>Размер</span>
+                                <span class="">100*45см</span>
+                            </div>
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>Цвет</span>
+                                <span>розовый</span>
+                            </div>
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>мощность</span>
+                                <span>60Вт</span>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-carousel-cell">
+                    <div class="portfolio-carousel-box ">
+                        <img src="assets/images/slide1.png" alt="foto">
+                    </div>
+                    <div class="portfolio-carousel-box">
+                        <h2 class="portfolio-carousel-title">Неоновая вывеска
+                            <br>«MANYA BAR»</h2>
+                        <p class="portfolio-carousel-text">
+                            Выполнена на оргстекле для Manya bar, г. Новокузнецк.
+                            ️<span>Бар с непревзойдённым стилем, долей бунтарства и великолепной атмосферой!</span>
+                            Одно из мест в мире, в котором нужно побывать!
+                        <div class="portfolio-carousel-parameters">
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>Размер</span>
+                                <span class="">100*45см</span>
+                            </div>
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>Цвет</span>
+                                <span>розовый</span>
+                            </div>
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>мощность</span>
+                                <span>60Вт</span>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-carousel-cell">
+                    <div class="portfolio-carousel-box ">
+                        <img src="assets/images/slide1.png" alt="foto">
+                    </div>
+                    <div class="portfolio-carousel-box">
+                        <h2 class="portfolio-carousel-title">Неоновая вывеска
+                            <br>«MANYA BAR»</h2>
+                        <p class="portfolio-carousel-text">
+                            Выполнена на оргстекле для Manya bar, г. Новокузнецк.
+                            ️<span>Бар с непревзойдённым стилем, долей бунтарства и великолепной атмосферой!</span>
+                            Одно из мест в мире, в котором нужно побывать!
+                        <div class="portfolio-carousel-parameters">
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>Размер</span>
+                                <span class="">100*45см</span>
+                            </div>
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>Цвет</span>
+                                <span>розовый</span>
+                            </div>
+                            <div class="portfolio-carousel-parameters__item">
+                                <span>мощность</span>
+                                <span>60Вт</span>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>    </div>
+    </section>    <section class="feedback">
+        <div class="container">
+            <div class="feedback-wrap">
+                <div class="feedback__text">
+                    <span> Хочешь вывеску или светильник со своим дизайном?</span>
+                    Отправь нам свою идею, а мы реализуем её!
+                </div>
+                <button class="feedback__submit js-open-modal" data-name='feedback'>отправить идею</button>
+            </div>
+        </div>
+        <div class="card-modal modal-feedback-wrapper" data-name="feedback">
+            <div class="mymodal modal-feedback">
+                <button class="modal-btn-close js-modal-close">
+                    <span class="modal-close"></span>
+                </button>
+                <h2 class="modal-title">Хочу неон по своей идее</h2>
+                <p class="">Оставьте свои контактные данные и не забудьте прикрепить картинку. Мы свяжемся с вами и пришлём
+                    расчёт стоимости.</p>
+                <form class="feedback-modal-form" action="" method="get">
+                    <div class="input-box ib-1">
+                        <input class="modal-form__input modal-name" type="text" required />
+                        <span class="form-span">Имя</span>
+                    </div>
+                    <div class="input-box ib-2">
+                        <input class="modal-form__input modal-tel" type="text" required />
+                        <span class="form-span">телефон</span>
+                    </div>
+                    <div class="input-box ib-2">
+                        <input class="modal-form__input modal-mail" type="text" required />
+                        <span class="form-span">эл. почта</span>
+                    </div>
+                    <div class="input-box ib-2">
+                        <input class="modal-form__input modal-comment" type="text" required />
+                        <span class="form-span">Комментарий</span>
+                    </div>
+                    <div class="input-box input-box-file">
+                        <label for="file">
+                            <svg class="file-clip">
+                                <use xlink:href="assets/images/svg/sprite.svg#clip">
+                                </use>
+                            </svg>
+                        </label>
+                        <input type="file" id="modal-comment-file" class="modal-comment-file">
+                        <label class="modal-comment-file-label" for="modal-comment-file">Прикрепить фото или картинку</label>
+                    </div>
+                    <div class="modal-form__checkbox-wrapper">
+                        <label class="modal-form__checkbox-label">
+                            <input class="modal-form__checkbox-input" type="checkbox"><span class="modal-form__checkbox-text">Я
+                                согласен
+                                с </span>
+                        </label>
+                        <a class="modal-form__link"> &nbspполитикой конфиденциальности</a>
+                    </div>
+                    <button class="modal-form__button">Отправить</button>
+                </form>
+            </div>
+        </div></section>
+    <section class="section gallery">
+        <div class="container">
+            <h3 class="our-work-title">Галерея</h3>
+            <p class="gallery-text-box">
+                Вывески и светильники из гибкого неона любой сложности и на любой вкус.
+                <span>Это всё сделали мы для наших клиентов. Если хотите себе оригинальный светильник или вывеску для вашего
+                    заведения, то свяжитесь с нами.</span>
+                Ещё больше работ в нашем Инстаграм
+            </p>
+            <a href="#" class="gallery-instagram">
+                <svg class="instagram-icon">
+                    <use xlink:href="assets/images/svg/sprite.svg#instagram">
+                </svg>
+                neon.rainbow.ru
+            </a>
+            <div class="tabs">
+                <ul class="tabs__controllers">
+                    <li data-id="one" class="tab tab--active"><span class="">Настенные и настольные светильники</span></li>
+                    <li data-id="two" class="tab"><span class="">Вывески из гибкого неона<br> для интерьера и экстерьера</span></li>
+                </ul>
+            
+                <div class="tabs__content">
+                    <div data-id="one" class="tabs__content-item tabs__content-item--active">
+                        <div class="gallery-carousel">
+                            <div class="gallery-carousel-cell">
+                                <article class="gallery-card">
+                                    <aside class="gallery-card__aside">
+                                        <figure class="gallery-card__figure ">
+                                            <img src="assets/images/gallery1.png" alt="banana" class="card__image">
+                                        </figure>
+                                    </aside>
+                                    <header class="gallery-card__header">
+                                        <h2 class="gallery-card__title"> Неоновый светильник
+                                            Банан</h2>
+                                    </header>
+                        
+                                    <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                        Подробнее
+                                    </button>
+                                </article>
+                            </div>
+                            <div class="gallery-carousel-cell">
+                                <article class="gallery-card">
+                                    <aside class="gallery-card__aside">
+                                        <figure class="gallery-card__figure">
+                                            <img src="assets/images/gallery2.png" alt="banana" class="card__image">
+                                        </figure>
+                                    </aside>
+                                    <header class="gallery-card__header">
+                                        <h2 class="gallery-card__title">Неоновый светильник
+                                            Форма</h2>
+                                    </header>
+                        
+                                    <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                        Подробнее
+                                    </button>
+                        
+                                </article>
+                            </div>
+                            <div class="gallery-carousel-cell">
+                                <article class="gallery-card">
+                                    <aside class="gallery-card__aside">
+                                        <figure class="gallery-card__figure">
+                                            <img src="assets/images/gallery3.png" alt="banana" class="card__image">
+                                        </figure>
+                                    </aside>
+                                    <header class="gallery-card__header">
+                                        <h2 class="gallery-card__title">Неоновый светильник
+                                            Котик</h2>
+                                    </header>
+                        
+                                    <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                        Подробнее
+                                    </button>
+                        
+                                </article>
+                            </div>
+                            <div class="gallery-carousel-cell">
+                                <article class="gallery-card">
+                                    <aside class="gallery-card__aside">
+                                        <figure class="gallery-card__figure">
+                                            <img src="assets/images/gallery4.png" alt="banana" class="card__image">
+                                        </figure>
+                                    </aside>
+                                    <header class="gallery-card__header">
+                                        <h2 class="gallery-card__title"> Неоновый светильник
+                                            Банан</h2>
+                                    </header>
+                        
+                                    <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                        Подробнее
+                                    </button>
+                        
+                                </article>
+                            </div>
+                            <div class="gallery-carousel-cell">
+                                <article class="gallery-card">
+                                    <aside class="gallery-card__aside">
+                                        <figure class="gallery-card__figure">
+                                            <img src="assets/images/gallery2.png" alt="banana" class="card__image">
+                                        </figure>
+                                    </aside>
+                                    <header class="gallery-card__header">
+                                        <h2 class="gallery-card__title">Неоновый светильник
+                                            Форма</h2>
+                                    </header>
+                        
+                                    <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                        Подробнее
+                                    </button>
+                        
+                                </article>
+                            </div>
+                            <div class="gallery-carousel-cell">
+                                <article class="gallery-card">
+                                    <aside class="gallery-card__aside">
+                                        <figure class="gallery-card__figure">
+                                            <img src="assets/images/gallery4.png" alt="banana" class="card__image">
+                                        </figure>
+                                    </aside>
+                                    <header class="gallery-card__header">
+                                        <h2 class="gallery-card__title">Неоновый светильник
+                                            Котик</h2>
+                                    </header>
+                        
+                                    <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                        Подробнее
+                                    </button>
+                        
+                                </article>
+                            </div>
+                           
+                        </div>
+                         <div class="card-modal  modal-feedback-wrapper gallery-modal" data-name='gallery-modal'>
+                         
+                             <div class="mymodal ">
+                                 <button class="modal-btn-close js-modal-close">
+                                     <span class="modal-close"></span>
+                                 </button>
+                                 <div class="gallery-modal-slider-box">
+                                     <div class="big-image-carousel">
+                                         <div class="carousel-cell cell1"><img src="assets/images/gallery1.png" alt="banan"></div>
+                                         <div class="carousel-cell cell2"><img src="assets/images/gallery2.png" alt="form"></div>
+                                         <div class="carousel-cell cell3"><img src="assets/images/gallery3.png" alt="cat"></div>
+                                     </div>
+                                     <div class="gallery-button-group">
+                                         <div id="gallery-button" class="gallery-modal-button" data-selector=".cell1" >
+                                             <img class="gallery-button__img" src="assets/images/gallery1.png" alt="banan">
+                                         </div>
+                                         <div id="gallery-button" class="gallery-modal-button" data-selector=".cell2">
+                                             <img class="gallery-button__img"  src="assets/images/gallery2.png" alt="form">
+                                         </div>
+                                         <div id="gallery-button" class="gallery-modal-button" data-selector=".cell3">
+                                             <img class="gallery-button__img"  src="assets/images/gallery3.png" alt="cat">
+                                         </div>
+                                     </div>
+                                 </div>
+                         
+                                 <div class="gallery-modal-content">
+                                     <h2 class="portfolio-carousel-title">Декоративный светильник Форма</h2>
+                                     <p class=".gallery-modal  gallery-modal-text">
+                                         Выполнен на прозрачном оргстекле для молодого бренда одежды @forma.official, г. Новосибирск.
+                                     </p>
+                                     <div class="portfolio-carousel-parameters">
+                                         <div class="portfolio-carousel-parameters__item">
+                                             <span>Размер</span>
+                                             <span class="">100*45см</span>
+                                         </div>
+                                         <div class="portfolio-carousel-parameters__item">
+                                             <span>Цвет</span>
+                                             <span>розовый</span>
+                                         </div>
+                                         <div class="portfolio-carousel-parameters__item">
+                                             <span>мощность</span>
+                                             <span>60Вт</span>
+                                         </div>
+                         
+                                     </div>
+                                     <button class="gallery-modal__button">Заказать</button>
+                                 </div>
+                             </div>
+                         </div>        </div>
+                    <div data-id="two" class="tabs__content-item">
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </section>    <section class=" section section--rent">
+        <div class="container">
+            <h3 class="our-work-title">Аренда</h3>
+            <p class="gallery-text-box rent-text-box">
+                Возьми в аренду готовые светильники. <br>Идеально подойдут для оформления вашего <br>мероприятия или крутой
+                фотосессии.
+            </p>
+    
+            <div class="rent-slider-box">
+                <div class="rent-main-carousel">
+                    <div class=" gallery-carousel-cell rent-carousel-cell">
+                        <article class="gallery-card">
+                            <aside class="gallery-card__aside">
+                                <figure class="gallery-card__figure">
+                                    <img src="assets/images/gallery1.png" alt="banana" class="card__image">
+                                </figure>
+                            </aside>
+                            <header class="gallery-card__header">
+                                <h2 class="gallery-card__title"> Неоновый светильник
+                                    Банан</h2>
+                            </header>
+                
+                            <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                Подробнее
+                            </button>
+                        </article>
+                    </div>
+                    <div class=" gallery-carousel-cell rent-carousel-cell">
+                        <article class="gallery-card">
+                            <aside class="gallery-card__aside">
+                                <figure class="gallery-card__figure">
+                                    <img src="assets/images/gallery2.png" alt="banana" class="card__image">
+                                </figure>
+                            </aside>
+                            <header class="gallery-card__header">
+                                <h2 class="gallery-card__title">Неоновый светильник
+                                    Форма</h2>
+                            </header>
+                
+                            <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                Подробнее
+                            </button>
+                
+                        </article>
+                    </div>
+                    <div class=" gallery-carousel-cell rent-carousel-cell">
+                        <article class="gallery-card">
+                            <aside class="gallery-card__aside">
+                                <figure class="gallery-card__figure">
+                                    <img src="assets/images/gallery3.png" alt="banana" class="card__image">
+                                </figure>
+                            </aside>
+                            <header class="gallery-card__header">
+                                <h2 class="gallery-card__title">Неоновый светильник
+                                    Котик</h2>
+                            </header>
+                
+                            <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                Подробнее
+                            </button>
+                
+                        </article>
+                    </div>
+                    <div class=" gallery-carousel-cell rent-carousel-cell">
+                        <article class="gallery-card">
+                            <aside class="gallery-card__aside">
+                                <figure class="gallery-card__figure">
+                                    <img src="assets/images/gallery1.png" alt="banana" class="card__image">
+                                </figure>
+                            </aside>
+                            <header class="gallery-card__header">
+                                <h2 class="gallery-card__title"> Неоновый светильник
+                                    Банан</h2>
+                            </header>
+                
+                            <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                Подробнее
+                            </button>
+                        </article>
+                    </div>
+                    <div class=" gallery-carousel-cell rent-carousel-cell">
+                        <article class="gallery-card">
+                            <aside class="gallery-card__aside">
+                                <figure class="gallery-card__figure">
+                                    <img src="assets/images/gallery2.png" alt="banana" class="card__image">
+                                </figure>
+                            </aside>
+                            <header class="gallery-card__header">
+                                <h2 class="gallery-card__title">Неоновый светильник
+                                    Форма</h2>
+                            </header>
+                
+                            <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                Подробнее
+                            </button>
+                
+                        </article>
+                    </div>
+                </div>        </div>
+        </div>
+    </section>    <section class="section section--workshop">
+        <div class="container">
+            <h3 class="our-work-title">Мастерская</h3>
+            <p class="gallery-text-box workshop-text-box">
+                Если вы хотите сами собрать светильник или вывеску из гибкого неона, то у нас вы можете закзать неоновую
+                трубку и другие комплектующие для создания собственных работ.
+            </p>
+            <div class="tabs">
+                <div class="tabs">
+                    <ul class="tabs__controllers">
+                        <li data-id="one" class="tab tab--active"><span class="">Гибкий неон</span> </li>
+                        <li data-id="two" class="tab"><span class="">Электронные компоненты</span> </li>
+                        <li data-id="three" class="tab"><span class="">Крепление на стен</span> </li>
+                    </ul>
+    
+                    <div class="tabs__content">
+                        <div data-id="one" class="tabs__content-item tabs__content-item--active">
+                            <div class="workshop-card-box">
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop1.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title"> Гибкий неон
+                                                8мм, красный</h2>
+    
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+    
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop2.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title">Гибкий неон
+                                                8мм, синий</h2>
+    
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+    
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop3.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title">Гибкий неон
+                                                8мм, холодный белый</h2>
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+    
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop1.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title"> Гибкий неон
+                                                8мм, красный</h2>
+    
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+    
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop2.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title">Гибкий неон
+                                                8мм, синий</h2>
+    
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+    
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop3.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title">Гибкий неон
+                                                8мм, холодный белый</h2>
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+    
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop1.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title"> Гибкий неон
+                                                8мм, красный</h2>
+    
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+    
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside loading">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop2.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title">Гибкий неон
+                                                8мм, синий</h2>
+    
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+    
+                                <div class="workshop-card-subbox">
+                                    <article class="workshop-gallery-card">
+                                        <aside class="gallery-card__aside">
+                                            <figure class="gallery-card__figure loading">
+                                                <img data-src="assets/images/workshop3.png" alt="banana" class="card__image">
+                                            </figure>
+                                        </aside>
+                                        <header class="gallery-card__header">
+                                            <h2 class="gallery-card__title">Гибкий неон
+                                                8мм, холодный белый</h2>
+                                        </header>
+                                        <span class="workshop-price">599₽/м</span>
+                                        <button data-name='gallery-modal' class="gallery-button js-open-modal">
+                                            Подробнее
+                                        </button>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-id="two" class="tabs__content-item">2</div>
+                <div data-id="three" class="tabs__content-item">3</div>
+            </div>
+        </div>
+    
+    </section>    <footer class="section section--footer">
+        <div class="container">
+            <h3 class="our-work-title">Инфо-центр</h3>
+            <div class="footer--wrap">
+                <div class="footer-col">
+                    <span class="footer--col-title">Оплата</span>
+                    <p>При оформлении заказа требуется предоплата от 10 до 50%.<br><br>
+                        Оплата производится за наличный и безналичный расчёт.<br><br>
+                        Работаем с физическими лицами и организациями.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <span class="footer--col-title">Доставка</span>
+                    <p>Заказы отправляются курьерской службой доставки СДЭК.<br><br>
+                        Также можем отправить заказ любым другим способом на ваш выбор.</p>
+                </div>
+            </div>
+            <div class="footer--logo">
+                <a href="#">
+                    <img src="assets/images/footerlogo.png" alt="#" title="logo">
+                </a>
+            </div>
+            <div class="footer-contacts">
+                <ul>
+                    <li>
+                        <a class="main-nav__link" href="tel:+79133391977">
+                            <svg class="svg-sprite-icon footer-tel">
+                                <use xlink:href="assets/images/svg/sprite.svg#tel"></use>
+                            </svg>
+                            +7 (913)
+                            339-19-77
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="svg-sprite-icon footer-ins">
+                                <use xlink:href="assets/images/svg/sprite.svg#ins"></use>
+                            </svg>
+                            neon.rainbow.ru
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:neon.rainbow@mail.ru" class="svg-sprite-icon footer-mail">
+                            <svg class="svg-sprite-icon footer-email">
+                                <use xlink:href="assets/images/svg/sprite.svg#email"></use>
+                            </svg>
+                            neon.rainbow@mail.ru
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="footer-nav__list ">
+                <li class="footer-nav__item"><a class="main-nav__link" href="#">наши работы</a></li>
+                <li class="footer-nav__item"><a class="main-nav__link" href="#">Галерея</a></li>
+                <li class="footer-nav__item"><a class="main-nav__link" href="#">конструктор</a></li>
+                <li class="footer-nav__item"><a class="main-nav__link" href="#">аренда</a></li>
+                <li class="footer-nav__item"><a class="main-nav__link" href="#">мастерская</a></li>
+                <li class="footer-nav__item"><a class="main-nav__link" href="#">Инфо-центр </a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.min.js"></script>
+</body>
+
+</html>
